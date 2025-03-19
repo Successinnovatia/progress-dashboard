@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion"; 
 
 const teams = [
   {
@@ -36,30 +36,30 @@ const SidebarCardTop = () => {
 
   return (
     <div className="bg-[#4A4DE6] text-white rounded-lg p-4 flex items-center justify-between w-full overflow-hidden">
-      {/* Left Section with Animation */}
+      
       <motion.div
-        key={index} // Key forces re-render for animation
+        key={index} 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
         className="flex items-center gap-3"
       >
-        {/* Profile Icon */}
+        
         <div
           className={`w-10 h-10 ${teams[index].color} text-black font-bold rounded-full flex items-center justify-center`}
         >
           {teams[index].initials}
         </div>
         
-        {/* Text Content */}
+        
         <div>
           <h3 className="font-semibold">{teams[index].name}</h3>
           <p className="text-gray-400 text-sm">{teams[index].role}</p>
         </div>
       </motion.div>
 
-      {/* Up & Down Buttons */}
+      
       <div className="flex flex-col">
         <button onClick={handleUp} className="text-white">
           <ChevronUp className="h-3 w-3" />

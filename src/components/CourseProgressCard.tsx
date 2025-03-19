@@ -7,7 +7,7 @@ interface CourseProgressCardProps {
     progressTextColor:string;
   }
   
-  const CourseProgressCard: React.FC<CourseProgressCardProps> = ({ progress, title, description, iconSrc, bgColor, progressTextColor }) => {
+  function CourseProgressCard({ progress, title, description, iconSrc, bgColor, progressTextColor }:CourseProgressCardProps) {
     return (
       <div className="flex items-center bg-white border border-gray-300 rounded-2xl p-4 w-full">
     

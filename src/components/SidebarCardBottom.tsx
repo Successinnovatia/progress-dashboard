@@ -30,25 +30,25 @@ function SidebarCardBottom() {
   };
 
   return<div className="text-white rounded-lg py-2 flex items-center justify-between w-full overflow-hidden">
-        {/* Left Section with Animation */}
+        
         <motion.div
-          key={index} // Key forces re-render for animation
+          key={index} 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
           className="flex items-center gap-3"
         >
-          {/* Profile Icon */}
+          
           <img src={profiles[index].avatar} alt={profiles[index].name} className="h-10 w-10"/>
           
-          {/* Text Content */}
+          
           <div>
             <h3 className="font-semibold">{profiles[index].name}</h3>
           </div>
         </motion.div>
   
-        {/* Up & Down Buttons */}
+        
         <div className="flex flex-col">
           <button onClick={handleUp} className="text-white">
             <ChevronUp className="h-3 w-3" />
